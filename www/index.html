@@ -17,7 +17,7 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
     <script src="https://www.mapquestapi.com/sdk/leaflet/v2.s/mq-map.js?key=UShjaMayAC4UkuBJ5nu5rqFuraxzEOQU"></script>
@@ -28,6 +28,7 @@
   </head>
 
   <body ng-app="starter">
+
     <script type="text/javascript">
 
             var webSocket;
@@ -78,7 +79,6 @@
             function writeResponse(text){
             //    messages.innerHTML += "<br/>" + text;
             }
-
                 window.onload = function() {
                     openSocket();
                     var popup = L.popup();
@@ -93,6 +93,27 @@
                         .search('Fishermans Wharf, San Francisco, CA');
                     MQ.geocode({ map: geolocationMap })
                         .search('333 Post St, San Francisco, CA 94108');
+                    MQ.geocode({ map: geolocationMap })
+                        .search('Alamo Square, San Francisco, CA');
+                    MQ.geocode({ map: geolocationMap })
+                        .search('501 Twin Peaks Blvd, San Francisco, CA 94114');
+                    MQ.geocode({ map: geolocationMap })
+                       .search('Presidio, San Francisco, CA');
+                    MQ.geocode({ map: geolocationMap })
+                       .search('2222 Broadway, San Francisco, CA 94115');
+                    MQ.geocode({ map: geolocationMap })
+                       .search('Alta Plaza Park, San Francisco, CA 94115');
+                    MQ.geocode({ map: geolocationMap })
+                       .search('1050 McAllister St, San Francisco, CA 94115');
+                    MQ.geocode({ map: geolocationMap })
+                       .search('2500 17th St, San Francisco, CA 94110');
+                    MQ.geocode({ map: geolocationMap })
+                       .search('1050 Mississippi St #2 San Francisco, CA 94107');
+                    MQ.geocode({ map: geolocationMap })
+                       .search('465 Missouri St, San Francisco, CA 94107');
+                    MQ.geocode({ map: geolocationMap })
+                       .search('Buena Vista & Haight Street, San Francisco, CA 94117');
+
                     function geolocationErrorOccurred(geolocationSupported, popup, latLng) {
                         popup.setLatLng(latLng);
                         popup.setContent(geolocationSupported ?
@@ -128,7 +149,8 @@
                     }
                 }
             </script>
+            <ion-nav-view></ion-nav-view>
   </body>
 
-<ion-nav-view></ion-nav-view>
+
 </html>
